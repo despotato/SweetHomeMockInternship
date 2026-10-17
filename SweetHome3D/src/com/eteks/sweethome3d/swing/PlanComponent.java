@@ -2004,8 +2004,8 @@ public class PlanComponent extends JComponent implements PlanView, Scrollable, P
   }
   
   /**
-   * Prints this component plan at the scale given in the home print attributes or at a scale 
-   * that makes it fill <code>pageFormat</code> imageable size if this attribute is <code>null</code>.
+   * Prints one fitted plan page per viewable level, in home level order.
+   * Homes without levels retain the configured print scale and pagination.
    */
   public int print(Graphics g, PageFormat pageFormat, int pageIndex) {
     if (pageIndex < 0) {
